@@ -1,0 +1,19 @@
+//import { useState } from "react";
+import styles from "./SearchBar.module.css";
+
+function SearchBar({ searchTerm, onSearch }) {
+  //const [searchTerm, setSearchTerm] = useState("");
+
+  return (
+    <div className={styles.searchBar}>
+      <input
+        type="text"
+        placeholder="Search by name or email..."
+        value={searchTerm}
+        onChange={(e) => onSearch(e.target.value)}
+      />
+    </div>
+  );
+}
+
+export default SearchBar;
